@@ -17,7 +17,7 @@ public class DefaultController {
 	@RequestMapping(path="/", method=RequestMethod.GET) 
 	public @ResponseBody String index() {
 
-		return "Welcome " + new Date();
+		return "Welcome amoxi " + new Date();
 	}
 
 }
