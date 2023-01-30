@@ -47,7 +47,7 @@ public class DefaultControllerTests {
 
 		String content = result.getResponse().getContentAsString();
 
-		assertTrue(content.matches("Welcome .*"));
+		assertTrue(content.matches("Hello .*"));
 
 
 	}
