@@ -142,7 +142,7 @@ public class StudentControllerTests {
 
 		String content = result.getResponse().getContentAsString();
 		JSONObject jsonObject = new JSONObject(content);
-		assertTrue(jsonObject.getString("description999").matches(".+ ID: [0-9]+!"));
+		assertTrue(jsonObject.getString("description").matches(".+ ID: [0-9]+!"));
 
 		JSONObject jsonUser = jsonObject.getJSONObject("student");
 		assertEquals(123, jsonUser.getInt("id"));

@@ -66,7 +66,7 @@ public class StudentController {
 		Student result = studentService.save(student);
 
 		HashMap<String, Object> map = new HashMap<>();
-		map.put("description_123Test", String.format("SAVED ID: %s!", result.getId()));
+		map.put("description", String.format("SAVED ID: %s!", result.getId()));
 		map.put("student", result);
 		return ResponseEntity.status(HttpStatus.OK).body(map);
 	}
