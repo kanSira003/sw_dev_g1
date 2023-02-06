@@ -1,16 +1,14 @@
 package com.example.accessingdatamysql.service.repo.entity;
 
-import java.sql.Timestamp;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity(name="STUDENTS") // This tells Hibernate to make a table out of this class
-public class StudentEntity {
-	@Id
+@Entity(name="COURSE")
+public class CourseEntity {
+    @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="ID", updatable=false)	
 	private Integer id;
@@ -18,29 +16,28 @@ public class StudentEntity {
 	@Column(name="NAME")
 	private String name;
 
-	@Column(name="EMAIL")
-	private String email;
-
-	@Column(name="STATE")
-	private Integer state;
-
-	@Column(name="CREATED")
-	private Timestamp created;
-
 	@Column(name="CREDIT")
 	private Integer credit;
 
+	@Column(name="SEAT")
+	private Integer seat;
+
+	@Column(name="MSEAT")
+	private Integer mseat;
 
 
 
 
-	public StudentEntity() {
+
+	public CourseEntity() {
 	}
 	
-	public StudentEntity(Integer id, String name, Integer state) {
+	public CourseEntity(Integer id, String name, Integer credit, Integer mseat) {
 		this.id = id;
 		this.name = name;
-		this.state = state;
+		this.credit = credit;
+        this.seat = 0;
+        this.mseat = mseat;
 	}
 
 
@@ -62,26 +59,6 @@ public class StudentEntity {
 		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Integer getState() {
-		return state;
-	}
-
-	public void setState(Integer state) {
-		this.state = state;
-	}
-
-	public Timestamp getCreated() {
-		return created;
-	}
-
 	public Integer getCredit() {
 		return credit;
 	}
@@ -90,9 +67,19 @@ public class StudentEntity {
 		this.credit = credit;
 	}
 
-	public void setCreated(Timestamp created) {
-		this.created = created;
+	public Integer getSeat() {
+		return seat;
 	}
 
+	public void setSeat(Integer seat) {
+		this.seat = seat;
+	}
 
+	public Integer getMseat() {
+		return mseat;
+	}
+
+	public void setMSeat(Integer mseat) {
+		this.mseat = mseat;
+	}
 }

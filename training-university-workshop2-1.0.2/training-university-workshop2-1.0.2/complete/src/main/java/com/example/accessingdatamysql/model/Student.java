@@ -11,7 +11,8 @@ public class Student {
 
 	//@JsonIgnore
 	//@JsonProperty(value="is_active")	
-	private Boolean isActive; 
+	private Boolean isActive;
+	private Integer credit; 
 
 
 	public Integer getId() {
@@ -46,6 +47,14 @@ public class Student {
 
 	public void setIsActive(Boolean isActive) {
 		this.isActive = isActive;
+	}
+
+	public Integer getCredit() {
+		return credit;
+	}
+
+	public void setCredit(Integer credit) {
+		this.credit = credit;
 	}
 
 
