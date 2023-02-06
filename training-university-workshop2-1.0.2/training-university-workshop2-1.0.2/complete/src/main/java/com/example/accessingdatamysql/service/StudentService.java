@@ -41,7 +41,6 @@ public class StudentService {
 		studentEntity.setEmail(student.getEmail());
 		studentEntity.setState(1);                                         // 0: Expired, 1: Active (Default)
 		studentEntity.setCreated(new Timestamp(System.currentTimeMillis()));
-        studentEntity.setCredit(0);
 
 
 		StudentEntity resultStudentEntity = studentRepository.save(studentEntity);
@@ -52,7 +51,6 @@ public class StudentService {
         resultStudent.setName(resultStudentEntity.getName());
         resultStudent.setEmail(resultStudentEntity.getEmail());
         resultStudent.setIsActive(1 == studentEntity.getState());
-        resultStudent.setCredit(resultStudentEntity.getCredit());
 
         return resultStudent;
     }

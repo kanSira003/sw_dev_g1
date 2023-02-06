@@ -79,7 +79,7 @@ public class CourseEntity {
 		return mseat;
 	}
 
-	public void setMSeat(Integer mseat) {
+	public void setMseat(Integer mseat) {
 		this.mseat = mseat;
 	}
 }
