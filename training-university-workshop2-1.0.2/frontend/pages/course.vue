@@ -11,8 +11,8 @@
         <v-text-field v-model="courseDetail.course_name" label="Course Name"></v-text-field>
         <v-text-field v-model="courseDetail.course_credit" label="Credit"></v-text-field>
         <v-text-field v-model="courseDetail.course_maxseat" label="Max Seat"></v-text-field>
-        <v-btn color="error">Reset</v-btn>
-        <v-btn color="success">Add Course</v-btn>
+        <v-btn color="error" @click="reset">Reset</v-btn>
+        <v-btn color="success" @click="addCourse">Add Course</v-btn>
       </v-form>
     </section>
   </div>
@@ -32,7 +32,22 @@
       }
     },
     methods: {
+      addCourse() {
+        console.log("Add Course");
+        const isAllField = this.courseDetail.course_id !== 0 && this.courseDetail.course_name !== "" && this.courseDetail.course_detail !== 0 && this.courseDetail.course_maxseat !== 0;
 
+        if(isAllField) {
+          console.log("Add Course Success");
+        } else {
+          alert("Please fill in all the field");
+        }
+      },
+      reset() {
+        this.courseDetail.course_id = 0;
+        this.courseDetail.course_name = "";
+        this.courseDetail.course_credit = 0;
+        this.courseDetail.course_maxseat = 0;
+      }
     }
   }
 </script>
