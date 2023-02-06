@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.example.accessingdatamysql.service.repo.entity.StudentEntity;
 
-public class CourseRepository {
+public interface CourseRepository extends CrudRepository<StudentEntity, Integer> {
     
 }

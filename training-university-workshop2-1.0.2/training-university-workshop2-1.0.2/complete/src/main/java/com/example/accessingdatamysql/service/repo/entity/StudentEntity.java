@@ -27,6 +27,9 @@ public class StudentEntity {
 	@Column(name="CREATED")
 	private Timestamp created;
 
+	@Column(name="CREDIT")
+	private Integer credit;
+
 
 
 
@@ -77,6 +80,14 @@ public class StudentEntity {
 
 	public Timestamp getCreated() {
 		return created;
+	}
+
+	public Integer getCredit() {
+		return credit;
+	}
+
+	public void setCredit(Integer credit) {
+		this.credit = credit;
 	}
 
 	public void setCreated(Timestamp created) {
