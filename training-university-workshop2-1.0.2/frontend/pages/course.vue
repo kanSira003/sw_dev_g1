@@ -51,3 +51,14 @@
     }
   }
 </script>
+
+<style scoped>
+  header {
+    text-align: center;
+  }
+
+  #course-section {
+    width: 50%;
+    margin: 0 auto;
+  }
+</style>
