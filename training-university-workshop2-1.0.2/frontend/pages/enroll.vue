@@ -2,7 +2,7 @@
   <div>
     <header>
       <div>
-        <h1>Course</h1>
+        <h1>Student Enroll</h1>
       </div>
     </header>
     <section id="credit-section">
@@ -14,9 +14,15 @@
       <v-form>
         <v-text-field label="Student ID"></v-text-field>
         <v-text-field label="Course 1"></v-text-field>
-        <v-text-field label="Course 2"></v-text-field>
-        <v-text-field label="Course 3"></v-text-field>
-        <v-text-field label="Course 4"></v-text-field>
+        <div>
+          <v-text-field label="Course 2"></v-text-field>
+        </div>
+        <div>
+          <v-text-field label="Course 3"></v-text-field>
+        </div>
+        <div>
+          <v-text-field label="Course 4"></v-text-field>
+        </div>
         <v-btn color="error">Reset</v-btn>
         <v-btn color="primary">New Course</v-btn>
         <v-btn color="success">Enroll</v-btn>
@@ -30,7 +36,13 @@
   export default {
     data() {
       return {
+        credit: 0,
+        enrollDetail: {
+          student_id: 0,
+          enroll_course_id: [
 
+          ]
+        }
       }
     },
     methods: {
